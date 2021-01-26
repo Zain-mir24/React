@@ -5,9 +5,10 @@ import App from './App';
 
 
 ReactDOM.render(
-  
-    <App />,
-  
+  <div>
+    <App />
+  <h1>App</h1>
+  </div>,
   document.getElementById('root')
 );
 

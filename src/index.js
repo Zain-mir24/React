@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom';
 const address ="https://picsum.photos/200?grayscale"
 const customestyle={
   color:"red",
-  fontSize:"20px"
+  fontSize:"20px",
+  borderColor:"black"
 }
 ReactDOM.render(
   <div>

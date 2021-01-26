@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
 
-
+const address ="https://picsum.photos/200?grayscale"
+const customestyle={
+  color:"red",
+  fontSize:"20px"
+}
 ReactDOM.render(
   <div>
-    <App />
-  <h1>App</h1>
+  <h1 style={{color:"red"}}>My heading</h1>
+   
   </div>,
   document.getElementById('root')
 );
-
+//its working
 

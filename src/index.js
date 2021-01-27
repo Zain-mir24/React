@@ -8,9 +8,10 @@ const customestyle={
   fontSize:"20px",
   borderColor:"black"
 }
+customestyle.color="green"
 ReactDOM.render(
   <div>
-  <h1 style={{color:"red"}}>My heading</h1>
+  <h1 style={customestyle}>My heading</h1>
    
   </div>,
   document.getElementById('root')

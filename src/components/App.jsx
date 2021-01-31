@@ -1,15 +1,26 @@
-// import React from 'react';
-// import Heading from './header';
-// import {Note} from './Note';
-// import {Footer} from './footer';
+import React from "react";
 
 
-// function App() {
-//     return <div>
-//         <Heading />
-//         <Note />
-//         <Footer />
-//     </div>
 
-// }
-// export default App
+function App(props) {
+  return (
+    <div>
+      <h1 className="heading">My Contacts</h1>
+      <div className="card">
+        <div className="top">
+          <h2 className="name">{props.name}</h2>
+          <img className="circle-img"
+            src={props.imgURL}
+            alt="avatar_img"
+          />
+        </div>
+        <div className="bottom ">
+          <p className="info">{props.phone}</p>
+          <p className="info">{props.email}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;

@@ -1,30 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./components/App";
+import Contacts from "./contacts"
 
-function Card(props) {
-  return (
-    <div>
-      <h2>{props.name}</h2>
-      <img src={props.img} alt="avatar_img" />
-      <p>{props.tel}</p>
-      <p>{props.email}</p>
-    </div>
-  );
-}
 ReactDOM.render(
   <div>
-    <h1>My contacts</h1>
-    <Card
-      name="eminem"
-      img="https://tse1.mm.bing.net/th?id=OIP.N5ZpVu44yJ2UctbNl988zwHaE7&pid=Api&P=0&w=283&h=189"
-      tel="+123 456 789"
-      email="eminem@.com"
+    <App
+      name={Contacts[0].name}
+      imgURL="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg"
+      phone="+987 654 321"
+      email="jack@nowhere.com"
     />
-    <Card
-      name="Luffy"
-      img="https://tse1.mm.bing.net/th?id=OIP.fPO14Ar2uB4i0panY6Yn2AHaDt&pid=Api&P=0&w=383&h=192"
-      tel="987 654 321"
-      email="rami@.com"
+    <App
+      name={Contacts[1].name}
+      imgURL="https://i.pinimg.com/originals/e3/94/47/e39447de921955826b1e498ccf9a39af.png"
+      phone="+987 654 321"
+      email="Chuck@nowhere.com"
     />
   </div>,
   document.getElementById("root")

@@ -1,6 +1,6 @@
 import React from "react";
 import Avatar from "./avatar"
-
+import Detail from "./details"
 
 function App(props) {
   return (
@@ -12,8 +12,9 @@ function App(props) {
             <Avatar   img={props.imgURL} />
         </div>
         <div className="bottom ">
-          <p className="info">{props.phone}</p>
-          <p className="info">{props.email}</p>
+          <Detail detailinfo={props.phone}/>
+          <Detail detailinfo={props.email}/>
+         
         </div>
       </div>
     </div>

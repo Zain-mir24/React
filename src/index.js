@@ -2,9 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 import Contacts from "./contacts"
+import  Avatar from "./components/avatar"
 
 ReactDOM.render(
   <div>
+     <Avatar 
+     img="https://tse1.mm.bing.net/th?id=OIP.yjbO1XwtVYZ5d7ERv_1P0QHaKe&pid=Api&rs=1&c=1&qlt=95&w=80&h=113"
+     />
     <App
       name={Contacts[0].name}
       imgURL="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg"

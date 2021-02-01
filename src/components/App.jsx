@@ -1,6 +1,19 @@
 import React from "react";
+import Entry from "./entry"
+import emojipedia from "../contacts";
 
-function App(props) {
+function CreateCard(emojiTerm) {
+  return (
+    <Entry
+      id={emojiTerm.id}
+      key={emojiTerm.id}
+      name={emojiTerm.name}
+      emoji={emojiTerm.emoji}
+      meaning={emojiTerm.meaning}
+    />
+  );
+}
+function App() {
   return (
     <div>
       <h1>
@@ -8,18 +21,9 @@ function App(props) {
       </h1>
 
       <dl className="dictionary">
-        <div className="term">
-          <dt>
-            <span className="emoji" role="img" aria-label="Tense Biceps">
-             {props.emoji}
-            </span>
-            <span>{props.name}</span>
-          </dt>
-          <dd>
-            {props.meaning}
-          </dd>
-        </div>
-     
+         
+    {emojipedia.map(CreateCard)}
+
        
       </dl>
     </div>

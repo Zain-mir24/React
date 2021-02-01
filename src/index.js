@@ -1,21 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-import Contacts from "./contacts"
-import  Avatar from "./components/avatar"
+import Contacts from "./contacts";
+import Avatar from "./components/avatar";
 
-function CreateCard(){
-  return <App   name={contacts.name}/> 
+function CreateCard(contacts) {
+  return (
+    <App
+      id={contacts.id}
+      key={contacts.id}
+      name={contacts.name}
+      imgURL={contacts.imgURL}
+      phone={contacts.phone}
+      email={contacts.email}
+    />
+  );
 }
 
 ReactDOM.render(
   <div>
-      <h1 className="heading">My Contacts</h1>
-     <Avatar 
-     img="https://tse1.mm.bing.net/th?id=OIP.yjbO1XwtVYZ5d7ERv_1P0QHaKe&pid=Api&rs=1&c=1&qlt=95&w=80&h=113"
-     />
-     {Contacts.map(CreateCard)}
-     
+    <h1 className="heading">My Contacts</h1>
+    <Avatar img="https://tse1.mm.bing.net/th?id=OIP.yjbO1XwtVYZ5d7ERv_1P0QHaKe&pid=Api&rs=1&c=1&qlt=95&w=80&h=113" />
+    {Contacts.map(CreateCard)}
+
     {/* <App
       name={Contacts[0].name}
       imgURL="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg"

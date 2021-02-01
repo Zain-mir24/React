@@ -5,7 +5,7 @@ import Detail from "./details"
 function App(props) {
   return (
     <div>
-      <h1 className="heading">My Contacts</h1>
+    
       <div className="card">
         <div className="top">
           <h2 className="name">{props.name}</h2>

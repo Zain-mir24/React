@@ -4,15 +4,14 @@ import App from "./components/App";
 import Contacts from "./contacts";
 import Avatar from "./components/avatar";
 
-function CreateCard(contacts) {
+function CreateCard(emojipedia) {
   return (
     <App
-      id={contacts.id}
-      key={contacts.id}
-      name={contacts.name}
-      imgURL={contacts.imgURL}
-      phone={contacts.phone}
-      email={contacts.email}
+      id={emojipedia.id}
+      key={emojipedia.id}
+      name={emojipedia.name}
+      emoji={emojipedia.emoji}
+      meaning={emojipedia.meaning}
     />
   );
 }
@@ -20,7 +19,7 @@ function CreateCard(contacts) {
 ReactDOM.render(
   <div>
     <h1 className="heading">My Contacts</h1>
-    <Avatar img="https://tse1.mm.bing.net/th?id=OIP.yjbO1XwtVYZ5d7ERv_1P0QHaKe&pid=Api&rs=1&c=1&qlt=95&w=80&h=113" />
+   
     {Contacts.map(CreateCard)}
 
     {/* <App

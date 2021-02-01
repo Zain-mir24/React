@@ -1,23 +1,27 @@
 import React from "react";
-import Avatar from "./avatar"
-import Detail from "./details"
 
 function App(props) {
   return (
     <div>
-    
-      <div className="card">
-        <div className="top">
-          <p>{props.id}</p>
-          <h2 className="name">{props.name}</h2>
-            <Avatar   img={props.imgURL} />
+      <h1>
+        <span>emojipedia</span>
+      </h1>
+
+      <dl className="dictionary">
+        <div className="term">
+          <dt>
+            <span className="emoji" role="img" aria-label="Tense Biceps">
+             {props.emoji}
+            </span>
+            <span>{props.name}</span>
+          </dt>
+          <dd>
+            {props.meaning}
+          </dd>
         </div>
-        <div className="bottom ">
-          <Detail detailinfo={props.phone}/>
-          <Detail detailinfo={props.email}/>
-         
-        </div>
-      </div>
+     
+       
+      </dl>
     </div>
   );
 }

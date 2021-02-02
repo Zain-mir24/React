@@ -12,5 +12,5 @@ ReactDOM.render(
 var number=[1,2,3,4,6];
 
 
- var y =number.map((x)=>x*2)
+ var y =number.filter((x)=>x<=2)
  console.log(y)

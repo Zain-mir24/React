@@ -9,3 +9,8 @@ ReactDOM.render(
   <App />,
   document.getElementById("root")
 );
+var number=[1,2,3,4,6];
+
+
+ var y =number.map((x)=>x*2)
+ console.log(y)

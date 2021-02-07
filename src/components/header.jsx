@@ -1,13 +1,13 @@
 import React from 'react'
 const customestyle ={
-    backgroundColor:'#f5ba13',
+    backgroundColor:'#f0f0f0',
     width:'100%',
-    
+    color:'black'
 }
 function Heading(){
  return (
      <div>
-     <h1 style={customestyle}>Keeper</h1>
+     <h1 style={customestyle}>The big project</h1>
 
      </div>
  )

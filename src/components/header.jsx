@@ -7,7 +7,7 @@ const customestyle ={
 function Heading(){
  return (
      <div>
-     <h1 style={customestyle}>The big project</h1>
+     <h1 style={customestyle}>Mobile Store</h1>
 
      </div>
  )

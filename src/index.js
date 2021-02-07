@@ -9,9 +9,9 @@ ReactDOM.render(
   <App />,
   document.getElementById("root")
 );
-var number=[1,2,3,4,6];
+// var number=[1,2,3,4,6];
 
 
- var y =number.filter((x)=>x<=2)
- console.log(y)
- console.log(number)
+//  var y =number.filter((x)=>x<=2)
+//  console.log(y)
+//  console.log(number)

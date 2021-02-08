@@ -1,17 +1,27 @@
 import React from "react";
-import './Header.css';
-
-const customStyle={
-    width:"100px"
-}
+import { Link } from "react-router-dom";
+import {customStyle , head ,Searchicon,headerSearch} from "./headercss"
+import SearchIcon from "@material-ui/icons/Search";
+const sinput = {
+ height:"12px",
+ padding:"10px",
+ border:"none",
+ width:"100%"
+};
 const Header = () => {
   return (
-    <nav className="header">
-      <img
-        style={customStyle}
-        className="header__logo"
-        src="https://tse3.mm.bing.net/th?id=OIP.7YtegzYvJ4oO4JlnkCFozAHaDL&pid=Api&P=0&w=377&h=162"
-      ></img>
+    <nav className="header" style={head}>
+      <Link to="/checkout">
+        <img
+          style={customStyle}
+          className="header__logo"
+          src="https://www.wired.com/wp-content/uploads/2016/10/amazon-logo-1024x768.jpg"
+        ></img>
+      </Link>
+      <div style={headerSearch}>
+        <input type="text" style={sinput} />
+        <SearchIcon style={Searchicon} />
+      </div>
     </nav>
   );
 };

@@ -15,3 +15,4 @@ const product = () => {
 }
 
 export default product
+//creating  a separate component for product list

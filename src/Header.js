@@ -42,7 +42,7 @@ const Header = () => {
 
       <div style={Headernav}>
         {/* 1stlink */}
-        <Link to="/" style={headerlink}>
+        <Link to="/Login" style={headerlink}>
           <div style={headerOption}>
             <span style={headerOptionlineone}>Hello Qazi</span>
             <span style={headerOptionlinetwo}>Sign in</span>

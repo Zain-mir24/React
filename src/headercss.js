@@ -10,9 +10,10 @@ const head = {
   backgroundColor: "#131921",
   display: "flex",
   alignItems: "center",
-  postion: "sticky",
+  position: "fixed",
   top:"0",
-  zIndex:"100"
+  zIndex:"100",
+  width:"100%"
 };
 const Searchicon = {
   backgroundColor: "#cd9042",

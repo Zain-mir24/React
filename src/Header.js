@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <nav className="header" style={head}>
       {/* Logo on the left */}
-      <Link to="/checkout">
+      <Link to="/">
         <img
           style={customStyle}
           className="header__logo"
@@ -63,7 +63,7 @@ const Header = () => {
           </div>
         </Link>
         {/* 4thlink */}
-        <Link to="/checkOut" style={headerlink}>
+        <Link to="/checkout" style={headerlink}>
           <div style={headerOptionBasket}>
             <ShoppingBasketIcon />
             <span style={headerbasketcount}>0</span>

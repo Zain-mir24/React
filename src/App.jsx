@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
-import Header from "./Header"
+import Header from "./Header";
+import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+const custom = {
+  marginTop: "150px",
+};
 function App() {
   return (
     <Router>
@@ -10,22 +13,18 @@ function App() {
       <div className="app">
         <Switch>
           <Route path="/checkout">
-            <h1>
-              CheckOut
-            </h1>
+            <Header />
+            <h1 style={custom}>CheckOut</h1>
           </Route>
           <Route path="/Login">
-            <h1>
-              Login
-            </h1>
+            <Header />
+
+            <h1 style={custom}>Login</h1>
           </Route>
           <Route path="/">
             <Header />
-            <h1>
-              Home Page!!!!!
-            </h1>
-           
-          </Route>  
+            <Home />
+          </Route>
         </Switch>
       </div>
     </Router>

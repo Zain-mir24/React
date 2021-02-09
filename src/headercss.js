@@ -4,6 +4,7 @@ const customStyle = {
   marginTop: "0",
   marginRight: "10px",
   marginLeft: "5px",
+  objectFit:"contain"
 };
 const head = {
   backgroundColor: "#131921",
@@ -19,9 +20,13 @@ const Searchicon = {
 const headerSearch = {
   display: "flex",
   flex:"1"
-  
-  
 };
 
+const Headernav={
 
-export { customStyle, head, Searchicon, headerSearch };
+}
+const headerlink={
+
+}
+
+export { customStyle, head, Searchicon,Headernav, headerlink,iheaderSearch };

@@ -4,7 +4,7 @@ const customStyle = {
   marginTop: "0",
   marginRight: "10px",
   marginLeft: "5px",
-  objectFit:"contain"
+  objectFit: "contain",
 };
 const head = {
   backgroundColor: "#131921",
@@ -13,20 +13,47 @@ const head = {
 };
 const Searchicon = {
   backgroundColor: "#cd9042",
-  padding:"5px !important" ,
-  height:"33px"
-  
+  padding: "5px !important",
+  height: "33px",
 };
 const headerSearch = {
   display: "flex",
-  flex:"1"
+  flex: "1",
 };
 
-const Headernav={
+const Headernav = {
+  display: "flex",
+  justifyContent: "space-evenly",
+};
+const headerlink = {
+  color: "white",
+  textDecoration: "none",
+};
+const headerOption = {
+  display: "flex",
+  flexDirection: "column",
+  marginLeft:"10px",
+  marginRight:"10px",
+};
+const headerOptionlineone = {
+  fontSize: "10px"
+};
+const headerOptionlinetwo = {
+  fontSize:"13px",
+  fontWeight:"800"
+};
+const headerOptionBasket={
 
 }
-const headerlink={
-
-}
-
-export { customStyle, head, Searchicon,Headernav, headerlink,iheaderSearch };
+export {
+  customStyle,
+  head,
+  Searchicon,
+  Headernav,
+  headerlink,
+  headerSearch,
+  headerOption,
+  headerOptionlinetwo,
+  headerOptionlineone,
+  headerOptionBasket
+};

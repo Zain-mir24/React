@@ -7,6 +7,10 @@ import {
   Headernav,
   headerlink,
   headerSearch,
+  headerOption,
+  headerOptionlinetwo,
+  headerOptionlineone,
+  headerOptionBasket
 } from "./headercss";
 import SearchIcon from "@material-ui/icons/Search";
 const sinput = {
@@ -35,17 +39,33 @@ const Header = () => {
 
       <div style={Headernav}>
         {/* 1stlink */}
-        <Link style={headerlink}>
-        <div>
-        <span>Hello Qazi</span>
-        <span>Sign in</span>
+        <Link to ="/"style={headerlink}>
+        <div  style={headerOption}>
+        <span style={headerOptionlineone}>Hello Qazi</span>
+        <span style={headerOptionlinetwo}>Sign in</span>
         </div>
-       
-
         </Link>
         {/* 2ndlink */}
+        <Link to="/"style={headerlink}>
+        <div  style={headerOption}>
+        <span  style={headerOptionlineone}>Return order</span>
+        <span style={headerOptionlinetwo}>& order</span>
+        </div>
+        </Link>
         {/* 3rdlink */}
+        <Link to="/" style={headerlink}>
+        <div style={headerOption}>
+        <span  style={headerOptionlineone}> your</span>
+        <span style={headerOptionlinetwo}>Prime</span>
+        </div>
+        </Link>
         {/* 4thlink */}
+        <Link to="/checkOut" style={headerlink}>
+        <div  style={headerOptionBasket}>
+        <span  style={headerOptionlineone}>Hello Qazi</span>
+        <span style={headerOptionlinetwo}>Sign in</span>
+        </div>
+        </Link>
       </div>
     </nav>
   );

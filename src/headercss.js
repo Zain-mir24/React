@@ -13,10 +13,13 @@ const head = {
 const Searchicon = {
   backgroundColor: "#cd9042",
   padding:"5px !important" ,
+  height:"33px"
   
 };
 const headerSearch = {
   display: "flex",
+  flex:"1"
+  
   
 };
 

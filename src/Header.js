@@ -4,8 +4,8 @@ import {customStyle , head ,Searchicon,headerSearch} from "./headercss"
 import SearchIcon from "@material-ui/icons/Search";
 const sinput = {
  height:"12px",
- padding:"10px",
- border:"none",
+ padding:"15px",
+ border:"1px solid orange",
  width:"100%"
 };
 const Header = () => {

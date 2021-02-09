@@ -18,6 +18,7 @@ const Home = () => {
         style={imgcustom}
         src="http://wgefund.org/wp-content/uploads/2016/11/AmazonSmilebanner.jpg"
       ></img>
+      {/*  */}
     </div>
   );
 };

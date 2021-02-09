@@ -1,4 +1,5 @@
 import React from "react";
+import Product from "./product";
 const custom = {
   marginTop: "100px",
   maxWidth: "1500px",

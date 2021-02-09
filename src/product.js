@@ -1,13 +1,20 @@
 import React from "react";
-const product = {
-    display: "flex",
-    flexDirection:"column",
-};
+const product = {};
 const productprice = {};
 const productrating = {
   display: "flex",
 };
-const productInfo = {};
+const productInfo = {
+  display: "flex",
+  flexDirection: "column",
+  height: "100px",
+  marginBottom: "15px",
+};
+const buttonstyle={
+    backgroundColor:"#f0c14b",
+    borde:"1px solid",
+    borderColor:"#a88734 #9c7e31"
+}
 const Product = (props) => {
   return (
     <div style={product}>
@@ -24,8 +31,16 @@ const Product = (props) => {
               <p>⭐</p>
             ))}
         </div>
-        <img src={props.image} />
-        <button>add to basket </button>
+        <img
+          style={{
+            width: "100%",
+            maxHeight: "200px",
+            objectFit: "contain",
+            marginBottom: "15px",
+          }}
+          src={props.image}
+        />
+        <button style={buttonstyle}>add to basket </button>
       </div>
     </div>
   );

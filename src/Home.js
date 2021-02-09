@@ -8,7 +8,7 @@ const custom = {
 };
 const imgcustom = {
   width: "100%",
-  height: "500px",
+  height: "300px",
   maskImage: "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))",
 };
 const Home = () => {

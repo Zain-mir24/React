@@ -10,6 +10,9 @@ const head = {
   backgroundColor: "#131921",
   display: "flex",
   alignItems: "center",
+  postion: "sticky",
+  top:"0",
+  zIndex:"100"
 };
 const Searchicon = {
   backgroundColor: "#cd9042",
@@ -43,7 +46,15 @@ const headerOptionlinetwo = {
   fontWeight:"800"
 };
 const headerOptionBasket={
+  display: "flex",
+  alignItems: "center"
 
+}
+const headerbasketcount={
+  fontSize:"13px",
+  fontWeight:"800",
+  marginLeft:"10px",
+  marginRight: "10px",
 }
 export {
   customStyle,
@@ -55,5 +66,6 @@ export {
   headerOption,
   headerOptionlinetwo,
   headerOptionlineone,
-  headerOptionBasket
+  headerOptionBasket,
+  headerbasketcount
 };

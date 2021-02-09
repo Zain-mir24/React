@@ -10,9 +10,12 @@ import {
   headerOption,
   headerOptionlinetwo,
   headerOptionlineone,
-  headerOptionBasket
+  headerOptionBasket,
+  headerbasketcount,
 } from "./headercss";
+
 import SearchIcon from "@material-ui/icons/Search";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 const sinput = {
   height: "12px",
   padding: "15px",
@@ -39,32 +42,32 @@ const Header = () => {
 
       <div style={Headernav}>
         {/* 1stlink */}
-        <Link to ="/"style={headerlink}>
-        <div  style={headerOption}>
-        <span style={headerOptionlineone}>Hello Qazi</span>
-        <span style={headerOptionlinetwo}>Sign in</span>
-        </div>
+        <Link to="/" style={headerlink}>
+          <div style={headerOption}>
+            <span style={headerOptionlineone}>Hello Qazi</span>
+            <span style={headerOptionlinetwo}>Sign in</span>
+          </div>
         </Link>
         {/* 2ndlink */}
-        <Link to="/"style={headerlink}>
-        <div  style={headerOption}>
-        <span  style={headerOptionlineone}>Return order</span>
-        <span style={headerOptionlinetwo}>& order</span>
-        </div>
+        <Link to="/" style={headerlink}>
+          <div style={headerOption}>
+            <span style={headerOptionlineone}>Return order</span>
+            <span style={headerOptionlinetwo}>& order</span>
+          </div>
         </Link>
         {/* 3rdlink */}
         <Link to="/" style={headerlink}>
-        <div style={headerOption}>
-        <span  style={headerOptionlineone}> your</span>
-        <span style={headerOptionlinetwo}>Prime</span>
-        </div>
+          <div style={headerOption}>
+            <span style={headerOptionlineone}> your</span>
+            <span style={headerOptionlinetwo}>Prime</span>
+          </div>
         </Link>
         {/* 4thlink */}
         <Link to="/checkOut" style={headerlink}>
-        <div  style={headerOptionBasket}>
-        <span  style={headerOptionlineone}>Hello Qazi</span>
-        <span style={headerOptionlinetwo}>Sign in</span>
-        </div>
+          <div style={headerOptionBasket}>
+            <ShoppingBasketIcon />
+            <span style={headerbasketcount}>0</span>
+          </div>
         </Link>
       </div>
     </nav>

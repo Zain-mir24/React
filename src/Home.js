@@ -44,7 +44,7 @@ const Home = () => {
         id={1234}
         title="The ez shoes,A shoe that will change your life. Makes you run alot faster"
         price={11.96}
-        rating={4}
+        rating={3}
         image="https://tse4.mm.bing.net/th?id=OIP.3jmjs80shtZqwgD7AvFLbgHaFj&pid=Api&P=0&w=213&h=161"
       />
        
@@ -52,10 +52,10 @@ const Home = () => {
       <div style={customrow}>
       <Product
         id={1234}
-        title="The lean hair brush,It will not damage the hair.The color is red and it is a really smooth comb"
+        title="These gloves are leather made.They are made for handling tough situations"
         price={11.96}
-        rating={5}
-        image="https://tse2.mm.bing.net/th?id=OIP.YmNbbFHsb9SPGsb51nWU9QHaGf&pid=Api&P=0&w=193&h=170"
+        rating={4}
+        image="https://tse1.mm.bing.net/th?id=OIP.ZGiBfsqOcl-QbdSVn3sAAAHaHa&pid=Api&P=0&w=300&h=300"
       />
        <Product
         id={1234}

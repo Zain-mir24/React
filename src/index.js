@@ -1,17 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import {StateProvider} from "./StateProvider";
-import reducer,{initialState} from "./Reducer"
 
+import reducer, { initialState } from "./Reducer";
+import { StateProvider } from "./StateProvider";
 ReactDOM.render(
-  <StateProvider initialState={initialState} reducer={}>
-    <App />
-  </StateProvider>,
+  <React.StrictMode>
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <App />
+    </StateProvider>
+  </React.StrictMode>,
   document.getElementById("root")
 );
-// var number=[1,2,3,4,6];
-
-//  var y =number.filter((x)=>x<=2)
-//  console.log(y)
-//  console.log(number)

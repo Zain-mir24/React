@@ -7,17 +7,19 @@ const productmain = {
   minWidth: "100px",
   zIndex: "1",
   alignItems: "center",
-  justifyContent: "flex-end"
+  justifyContent: "flex-end",
+  padding: "20px",
+  margin: "10px", 
+ width: "100%"
+
 };
-const productprice = {};
+const productprice = { marginTop: "5px" };
 const productrating = {
   display: "flex",
 };
 const productInfo = {
   height: "100px",
   marginBottom: "15px",
-  display: "flex",
-  flexDirection: "column"
 };
 const buttonstyle = {
   backgroundColor: "#f0c14b",
@@ -40,7 +42,9 @@ const Product = (props) => {
               <p>⭐</p>
             ))}
         </div>
-        <img
+        
+      </div>
+      <img
           style={{
             width: "100%",
             maxHeight: "200px",
@@ -49,8 +53,7 @@ const Product = (props) => {
           }}
           src={props.image}
         />
-        <button style={buttonstyle}>add to basket </button>
-      </div>
+        <button style={buttonstyle}>add to basket </button> 
     </div>
   );
 };

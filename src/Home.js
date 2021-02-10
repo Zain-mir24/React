@@ -10,6 +10,8 @@ const imgcustom = {
   width: "100%",
   height: "300px",
   maskImage: "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))",
+  zIndex:"-1",
+  marginBottom: "-5px"
 };
 const Home = () => {
   return (

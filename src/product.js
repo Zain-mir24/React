@@ -1,23 +1,32 @@
 import React from "react";
-const product = {};
+const productmain = {
+  display: "flex",
+  flexDirection: "column",
+  backgroundColor: "white",
+  maxHeight: "400px",
+  minWidth: "100px",
+  zIndex: "1",
+  alignItems: "center",
+  justifyContent: "flex-end"
+};
 const productprice = {};
 const productrating = {
   display: "flex",
 };
 const productInfo = {
-  display: "flex",
-  flexDirection: "column",
   height: "100px",
   marginBottom: "15px",
+  display: "flex",
+  flexDirection: "column"
 };
-const buttonstyle={
-    backgroundColor:"#f0c14b",
-    borde:"1px solid",
-    borderColor:"#a88734 #9c7e31"
-}
+const buttonstyle = {
+  backgroundColor: "#f0c14b",
+  borde: "1px solid",
+  borderColor: "#a88734 #9c7e31 #846a29",
+};
 const Product = (props) => {
   return (
-    <div style={product}>
+    <div style={productmain}>
       <div style={productInfo}>
         <p>{props.title}</p>
         <p style={productprice}>

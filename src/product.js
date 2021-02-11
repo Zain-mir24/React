@@ -27,11 +27,9 @@ const buttonstyle = {
   borderColor: "#a88734 #9c7e31 #846a29",
 };
 
-function Product({ id, title, image, price, rating }) {
-  const [{ }, dispatch] = useStateValue();
-
-  const addToBasket = () => {
-    // dispatch the item into the data layer
+const Product = ({ id, title, price, rating, image }) => {
+  const [{basket},dispatch] = useStateValue();
+  const addtobasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
@@ -43,28 +41,35 @@ function Product({ id, title, image, price, rating }) {
       },
     });
   };
-
   return (
-    <div className="product">
-      <div className="product__info">
+    <div style={productmain}>
+      <div style={productInfo}>
         <p>{title}</p>
-        <p className="product__price">
+        <p style={productprice}>
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        <div className="product__rating">
+        <div style={productrating}>
           {Array(rating)
             .fill()
-            .map((_, i) => (
-              <p>🌟</p>
+            .map((_) => (
+              <p>⭐</p>
             ))}
         </div>
       </div>
-
-      <img src={image} alt="" />
-
-      <button onClick={addToBasket}>Add to Basket</button>
+      <img
+        style={{
+          width: "100%",
+          maxHeight: "200px",
+          objectFit: "contain",
+          marginBottom: "15px",
+        }}
+        src={image}
+      />
+      <button onClick={addtobasket} style={buttonstyle}>
+        add to basket{" "}
+      </button>
     </div>
   );
-}
+};
 export default Product;

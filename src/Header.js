@@ -26,6 +26,7 @@ const sinput = {
 };
 const Header = () =>  {
   const[ {basket}] = useStateValue();
+  console.log(basket)
   return (
     <nav className="header" style={head}>
       {/* Logo on the left */}

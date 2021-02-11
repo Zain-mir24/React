@@ -79,7 +79,7 @@ const Home = () => {
         title="The lean hair brush,It will not damage the hair.The color is red and it is a really smooth comb"
         price={11.96}
         rating={5}
-        image="https://tse2.mm.bing.net/th?id=OIP.YmNbbFHsb9SPGsb51nWU9QHaGf&pid=Api&P=0&w=193&h=170"
+        image="https://tse3.mm.bing.net/th?id=OIP.Qkps31xYhwfWCQ0gxgplbAHaEK&pid=Api&P=0&w=297&h=168"
       /></div>
       
     </div>

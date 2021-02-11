@@ -16,7 +16,8 @@ import {
 
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import {useStatevalue} from "./StateProvider"
+
+import { useStateValue } from "./StateProvider";
 const sinput = {
   height: "12px",
   padding: "15px",
@@ -24,7 +25,7 @@ const sinput = {
   width: "100%",
 };
 const Header = () =>  {
-  const [{basket },dispatch] = useStatevalue();
+  const[ {basket}] = useStateValue();
   return (
     <nav className="header" style={head}>
       {/* Logo on the left */}
@@ -68,7 +69,7 @@ const Header = () =>  {
         <Link to="/checkout" style={headerlink}>
           <div style={headerOptionBasket}>
             <ShoppingBasketIcon />
-            <span style={headerbasketcount}>{basket.length}</span>
+            <span style={headerbasketcount}>{basket?.length}</span>
           </div>
         </Link>
       </div>

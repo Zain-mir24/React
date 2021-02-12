@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useStateValue } from "./StateProvider";
 const checkoutproduct = {
   display: "flex",
 };
@@ -14,13 +14,24 @@ const checkoutproductimage = {
   width: "180px",
   height: "180px",
 };
-const checkouttitle = {};
+const checkouttitle = {
+  fontSize: "17px",
+  fontWeight: "800",
+};
 const buttonstyle = {
   backgroundColor: "#f0c14b",
   borde: "1px solid",
   borderColor: "#a88734 #9c7e31 #846a29",
 };
 const Checkoutproduct = ({ id, title, price, rating, image }) => {
+  const [{basket},dispatch] = useStateValue();
+  const removefrombasket=() =>{
+   dispatch({
+     type:"REMOVE_FROM_BASKET",
+     id:id
+   })
+
+  }
   return (
     <div style={checkoutproduct}>
       <img style={checkoutproductimage} src={image} alt="" />
@@ -38,7 +49,7 @@ const Checkoutproduct = ({ id, title, price, rating, image }) => {
               <p>⭐</p>
             ))}
         </div>
-        <button style={buttonstyle}>Remove from basket</button>
+        <button  onClick={removefrombasket}  style={buttonstyle}>Remove from basket</button>
       </div>
     </div>
   );

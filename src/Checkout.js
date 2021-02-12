@@ -34,11 +34,11 @@ const Checkout = () => {
           {/* List of all the components in the check out page*/}
           {basket.map((item) => (
             <Checkoutproduct
-             item={item.id}
+             id={item.id}
              title={item.title}
              price={item.price}
              rating={item.rating}
-             image={item.image}
+             image={item.image} 
             />
           ))}
         </div>

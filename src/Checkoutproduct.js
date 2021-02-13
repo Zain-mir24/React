@@ -2,6 +2,8 @@ import React from "react";
 import { useStateValue } from "./StateProvider";
 const checkoutproduct = {
   display: "flex",
+  marginBottom:"20px",
+  marginTop:"20px"
 };
 const checkoutinfo = {
   padding: "20px",

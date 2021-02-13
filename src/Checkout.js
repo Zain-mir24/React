@@ -1,24 +1,37 @@
 import React from "react";
 import { useStateValue } from "./StateProvider";
 import Checkoutproduct from "./Checkoutproduct"
+import Subtotal from "./Subtotal"
 //styling the checkout page here
 const checkout = {
-  marginTop: "100px",
+  display: "flex",
+  padding:"20px",
+  backgroundColor:"white",
+  height:"max-content",
+  
 };
 const checkoutad = {
   width: "100%",
   height: "400px",
   marginBottom: "25px;",
 };
-const checkouttitle = {};
+const checkouttitle = {
+  marginRight: "10px",
+  padding:"20px",
+  borderBottom:"1px solid lightgray",
+};
+const checkoutleft={}
+const checkoutright={marginTop:"90px"}
 const Checkout = () => {
   const [{ basket }, dispatch] = useStateValue();
   return (
     <div style={checkout}>
+      <div style={checkoutleft}>
       <img
         style={checkoutad}
         src="https://www.lemonlight.com/app/uploads/2018/10/Your-Complete-Guide-to-Amazon-Advertising.png"
       />
+
       {basket?.length === 0 ? (
         <div>
           <h1> your shopping basket is empty</h1>
@@ -41,6 +54,13 @@ const Checkout = () => {
              image={item.image} 
             />
           ))}
+        </div>
+      )}
+      </div>
+      {basket.length > 0 &&(
+        <div style={checkoutright}>
+         <h1>Subtotal</h1>
+         <Subtotal />
         </div>
       )}
     </div>

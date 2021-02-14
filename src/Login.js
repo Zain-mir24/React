@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
+import { db, auth } from "./firebase";
 const Logincontainer = {
-
   width: "300px",
   textAlign: "center",
   display: "flex",
@@ -9,29 +9,27 @@ const Logincontainer = {
   padding: "20px",
   border: "1px solid lightgray",
   height: "fit-content",
-
-
 };
-const login={
-    display: "flex",
-    flexDirection: "column",
-    backgroundColor:"white",
-    height:"100vh",
-    alignItems: "center"
-}
-const h5={
-  marginBottom:"5px"
-}
-const h1={
-  fontWeight:"500",
-  marginBottom:"20px"
-}
-const inputstyle={
-  height:"30px",
-  marginBottom:"10px",
-  backgroundColor:"white",
-  width:"98%"
-}
+const loginstyle = {
+  display: "flex",
+  flexDirection: "column",
+  backgroundColor: "white",
+  height: "100vh",
+  alignItems: "center",
+};
+const head5 = {
+  marginBottom: "5px",
+};
+const head1 = {
+  fontWeight: "500",
+  marginBottom: "20px",
+};
+const inputstyle = {
+  height: "30px",
+  marginBottom: "10px",
+  backgroundColor: "white",
+  width: "98%",
+};
 const buttonstyle = {
   backgroundColor: "#f0c14b",
   borde: "1px solid",
@@ -39,31 +37,45 @@ const buttonstyle = {
 };
 const Login = () => {
   const history = useHistory();
-  const login=event=>{
-      event.preventDefault();
-  }
-  const Register=event=>{
+  const [email, setemail] = React.useState("");
+  const [password, setpassword] = React.useState("");
+  const login = (event) => {
     event.preventDefault();
-}
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((error) => alert(error.message));
+  };
+  const register = (event) => {
+    event.preventDefault();
+    auth.createUserWithEmailAndPassword(email, password).then((auth) => {
+      // it successfully created a new user with email and password
+      if (auth) {
+        history.push("/");
+      }
+    });
+  };
   return (
-    <div style={login}>
+    <div style={loginstyle}>
       <Link to="/">
-        <img 
-         src="https://tse4.mm.bing.net/th?id=OIP.9l7oS9LpgfDzE-jh5Kkl5QHaDa&pid=Api&P=0&w=345&h=160"
-        />
+        <img src="https://tse4.mm.bing.net/th?id=OIP.9l7oS9LpgfDzE-jh5Kkl5QHaDa&pid=Api&P=0&w=345&h=160" />
       </Link>
 
       <div style={Logincontainer}>
-      <h1 style={h1}>Sigin</h1>
-      <form>
-        <h5 style={h5}>E-mail</h5>
-        <input style={inputstyle} type="text" />
-        <h5 style={h5}>password</h5>
-        <input style={inputstyle} type="password" />
-        <button onClick={login} style={buttonstyle}>Signin</button>
-      </form>
-      <p>By signing in you agree to amazon privacy policy</p>
-      <button onclick={register}>Create your amazon account</button>
+        <h1 style={head1}>Sigin</h1>
+        <form>
+          <h5 style={head5}>E-mail</h5>
+          <input style={inputstyle} onChange={e => setemail(e.target.value)} type="text" />
+          <h5 style={head5}>password</h5>
+          <input style={inputstyle} onChange={e => setpassword(e.target.value)} type="password" />
+          <button onClick={login}   style={buttonstyle}>
+            Signin
+          </button>
+        </form>
+        <p>By signing in you agree to amazon privacy policy</p>
+        <button onclick={register}>Create your amazon account</button>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const checkout = {
 };
 const checkoutad = {
   width: "100%",
-  height: "400px",
+
   marginBottom: "25px;",
 };
 const checkouttitle = {
@@ -20,7 +20,9 @@ const checkouttitle = {
   padding:"20px",
   borderBottom:"1px solid lightgray",
 };
-const checkoutleft={}
+const checkoutleft={
+  width:"80%"
+}
 const checkoutright={marginTop:"90px"}
 const Checkout = () => {
   const [{ basket }, dispatch] = useStateValue();

@@ -1,3 +1,7 @@
+export const getbaskettotal=(basket)=>
+basket?.reduce((amount,item)=>item.price + amount, 0);
+
+
 export const initialState={
     basket:[{
         id:"1234",

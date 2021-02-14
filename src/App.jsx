@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import Checkout from "./Checkout";
+import Login from "./Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const custom = {
   marginTop: "150px",
@@ -20,8 +21,9 @@ function App() {
           </Route>
           <Route path="/Login">
             <Header />
+            <Login />
 
-            <h1 style={custom}>Login</h1>
+            
           </Route>
           <Route path="/">
             <Header />

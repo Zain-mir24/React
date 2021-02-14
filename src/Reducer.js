@@ -3,19 +3,7 @@ basket?.reduce((amount,item)=>item.price + amount, 0);
 
 
 export const initialState={
-    basket:[{
-        id:"1234",
-        title:"These gloves are leather made.They are made for handling tough situations",
-        price:"11.96",
-        rating:4,
-        image:"https://tse1.mm.bing.net/th?id=OIP.ZGiBfsqOcl-QbdSVn3sAAAHaHa&pid=Api&P=0&w=300&h=300"
-    },{
-        id:"134",
-        title:"These gloves are leather made.They are made for handling tough situations",
-        price:"11.96",
-        rating:4,
-        image:"https://tse1.mm.bing.net/th?id=OIP.ZGiBfsqOcl-QbdSVn3sAAAHaHa&pid=Api&P=0&w=300&h=300"
-    }],
+    basket:[],
     user:null
     
 }
